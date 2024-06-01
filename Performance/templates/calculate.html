@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction System</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'calculate.css' %}">
+</head>
+<body>
+    <h1>{{ welcome_message }}</h1>
+    <form action="{% url 'predict_placement' %}" method="post">
+        {% csrf_token %}
+        <!-- Add any input fields for predicting placement -->
+        <button type="submit">Predict Placement</button>
+    </form>
+</body>
+</html>

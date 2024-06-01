@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction System</title>
+
+    <!-- Link to your CSS file -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+
+    <style>
+        .table-container {
+            width: 40%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Placement Prediction System</h2>
+<div class="table-container">
+
+<form id="placementForm" method='POST' action="/result/">
+    {% csrf_token %}
+    <table>
+        <tr>
+        <td><label for="cgpa">CGPA:</label></td>
+        <td><input type="number" id="cgpa" name="cgpa" min="0" max="10" step="0.01" required></td>
+        </tr>
+        <tr>
+        <td><label for="internships">Internships:</label></td>
+        <td><input type="number" id="internships" name="internships" min="0" max="12" required></td>
+        </tr>
+        <tr>
+        <td><label for="projects">Projects:</label></td>
+        <td><input type="number" id="projects" name="projects" min="1" max="20" required></td>
+        </tr>
+        <tr>
+        <td><label for="workshopsCertifications">Workshops/Certifications:</label></td>
+        <td><input type="number" id="workshopsCertifications" name="workshopsCertifications" min="1" max="20" required></td>
+        </tr>
+        <tr>
+        <td><label for="aptitudeTestScore">Aptitude Test Score:</label></td>
+        <td><input type="number" id="aptitudeTestScore" name="aptitudeTestScore" min="1" max="100" required></td>
+        </tr>
+        <tr>
+        <td><label for="softSkillsRating">Soft Skills Rating:</label></td>
+        <td><input type="number" id="softSkillsRating" name="softSkillsRating" min="1" max="5" step="0.01" required></td>
+        </tr>
+        <tr>
+            <td><label for="extracurricularActivities">Extracurricular Activities:</label></td>
+            <td>
+                <select id="extracurricularActivities" name="extracurricularActivities" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="placementTraining">Placement Training:</label></td>
+            <td>
+                <select id="placementTraining" name="placementTraining" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </td>
+        </tr>
+        
+        
+        <tr>
+        <td><label for="sscMarks">SSC Marks:</label></td>
+        <td><input type="number" id="sscMarks" name="sscMarks" min="1" max="100" required></td>
+        </tr>
+        <tr>
+        <td><label for="hscMarks">HSC Marks:</label></td>
+        <td><input type="number" id="hscMarks" name="hscMarks" min="1" max="100" required></td>
+        </tr>
+    </table>
+        
+
+<!-- Button for form submission -->
+<button type="submit">Predict Placement</button>
+</form>
+
+<div id="predictionResult">
+    <!-- Prediction result will be displayed here -->
+</div>
+
+</div>
+
+</body>
+</html>

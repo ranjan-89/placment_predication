@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction Result</title>
+    <!-- Add your CSS stylesheets or inline styles here -->
+    <style>
+        /* Example CSS styles for layout and appearance */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Placement Prediction Result</h2>
+        <h1>Prediction will be shown here : {{prediction}}</h1>
+        {% if prediction %}
+            <p>Prediction: {{ prediction }}</p>
+        {% else %}
+            <p>Sorry, the prediction result is not available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

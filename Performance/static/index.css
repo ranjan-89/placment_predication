@@ -1,0 +1,57 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('images/kira_dvds.jpg');
+    background-size: cover;
+    margin: 20px;
+    }
+    
+    h2 {
+    text-align: center;
+    color: #000000;
+    }
+    form {
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3300ff;
+    }
+    
+    input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    
+    button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    }
+    
+    button:hover {
+    background-color: #463295;
+    }
+    
+    #predictionResult {
+    margin-top: 20px;
+    text-align: center;
+    }
+    
+    #predictionResult p {
+    font-size: 18px;
+    color: #333;
+    }
